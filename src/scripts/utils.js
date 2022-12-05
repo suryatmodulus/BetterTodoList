@@ -41,13 +41,7 @@ function daysDiff(date) {
   const oneDay = 24 * 60 * 60 * 1000;
   const today = new Date();
   const dueDate = new Date(date);
-  if (dueDate.getDate() < today.getDate()) {
-    return -1;
-  } else if (dueDate.getDate() === today.getDate()) {
-    return 0;
-  } else {
-    return Math.round(Math.abs((today - dueDate) / oneDay));
-  }
+  return Math.round((dueDate - today) / oneDay) + 1;
 }
 
 export { uuidv4 as generateId, getTimeAgo, getMinDate, daysDiff };

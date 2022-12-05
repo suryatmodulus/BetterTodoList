@@ -13,9 +13,11 @@ const getDueDateProps = (dueDate) => {
   const daysLeft = daysDiff(dueDate);
   let text = '';
   let color = '';
-  if (daysLeft === -1) {
+  let isOverdue = false;
+  if (daysLeft <= -1) {
     text = 'Overdue';
     color = 'gray';
+    isOverdue = true;
   } else if (daysLeft === 0) {
     text = 'Due Today';
     color = 'red';
@@ -35,6 +37,7 @@ const getDueDateProps = (dueDate) => {
   return {
     element: `<span class="due-date"><strong style="color:${color};">${text}</strong></span>`,
     color: color,
+    isOverdue,
   };
 };
 
@@ -42,9 +45,16 @@ const getCard = (
   { id, title, description, dueDate, isFavoriate, createdAt },
   listId
 ) => {
+  const {
+    color,
+    element: dueDateElement,
+    isOverdue,
+  } = getDueDateProps(dueDate);
   return `<div class="card-container" cardId=${id} draggable="true" >
                 <div class="card-header">
-                    <span class="card-title">
+                    <span class="card-title" style="text-decoration:${
+                      isOverdue ? ' line-through' : 'inherit'
+                    }">
                         ${title}
                     </span>
                     <div class="card-button-container">
@@ -58,14 +68,16 @@ const getCard = (
                       </button>
                     </div>
                 </div>
-                <p class="card-description">
+                <p class="card-description" style="text-decoration:${
+                  isOverdue ? ' line-through' : 'inherit'
+                }">
                     ${description}
                 </p>
                 <p class="card-footer">
                   <span class="created-ago">
                   Created ${getTimeAgo(new Date(createdAt))} ago
                   </span>
-                  ${getDueDateProps(dueDate).element}
+                  ${dueDateElement}
                 </p>
 
             </div>`;
