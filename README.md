@@ -36,4 +36,4 @@
    ```
    http://localhost:4173/
    ```
-7. "dist" folder contains your production code - You can upload it to any hosting provider to make your side live(ex: netlify.com).
+7. "dist" folder contains your production code - You can upload it to any hosting provider to make your website live (ex: netlify.com).
