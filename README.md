@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Clone / Download [this](https://github.com/suryatmodulus/BetterTodoList)repo.
+1. Clone / Download [this](https://github.com/suryatmodulus/BetterTodoList) repo.
    ```
    git clone https://github.com/suryatmodulus/BetterTodoList
    ```
