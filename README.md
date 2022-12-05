@@ -4,7 +4,7 @@
 
 1. Clone / Download [this](https://github.com/suryatmodulus/BetterTodoList repo.
    ```
-   git clone https://github.com/gkanishk/todoList
+   git clone https://github.com/suryatmodulus/BetterTodoList
    ```
 2. Goto project directory
    ```
@@ -36,4 +36,4 @@
    ```
    http://localhost:3000/
    ```
-7. "dist" contains your production code - you can any hosting provider to host your site. Just upload the dist folder.
+7. "dist" folder contains your production code - You can upload it to any hosting provider to make your side live(ex: netlify.com).
