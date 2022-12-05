@@ -21,7 +21,7 @@
    ```
    Server will run and start at:
    ```
-   http://localhost:3000/
+   http://localhost:5173/
    ```
 5. For production run:
    ```
@@ -34,6 +34,6 @@
    ```
    Server will run and start at:
    ```
-   http://localhost:3000/
+   http://localhost:4173/
    ```
 7. "dist" folder contains your production code - You can upload it to any hosting provider to make your side live(ex: netlify.com).
